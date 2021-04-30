@@ -11,7 +11,11 @@ const ExpenseItem = (props) => {
 	] = useState(props.title);
 
 	const clickHandler = () => {
-		setTitle('testing');
+		if (title) {
+			setTitle('testing');
+		} else {
+			setTitle(title);
+		}
 	};
 
 	return (
